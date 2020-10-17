@@ -64,3 +64,9 @@ Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&ut
   }
 </style>
 ```
+
+#### 上传命令
+
+```bash
+scp /out/new.zip root@47.105.184.229:/root/production/html
+```
