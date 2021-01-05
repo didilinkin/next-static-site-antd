@@ -178,7 +178,15 @@ export default function Index() {
       <footer className={classes.footer}>
         <Container>
           <Copyright />
-          <Typography variant="body2">鲁ICP备2020037005号.</Typography>
+          <Typography variant="body2">
+            <Link
+              color="inherit"
+              href="https://beian.miit.gov.cn"
+              target="_blank"
+            >
+              鲁ICP备2020037005号
+            </Link>
+          </Typography>
         </Container>
       </footer>
     </div>
