@@ -184,7 +184,7 @@ export default function Index() {
               href="https://beian.miit.gov.cn"
               target="_blank"
             >
-              鲁ICP备2020037005号
+              鲁ICP备2020037005号-1
             </Link>
           </Typography>
         </Container>

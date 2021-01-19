@@ -40,6 +40,9 @@ Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&ut
 > 底部加入代码
 
 ```html
+<!-- 以下内容之前插入 统计和样式代码 -->
+<meta charset="utf-8" />
+
 <!-- 百度统计 -->
 <script>
   var _hmt = _hmt || []
