@@ -1,3 +1,10 @@
+<!--
+ * @Author: yanxiaodi 929213769@qq.com
+ * @Date: 2020-10-13 12:38:03
+ * @LastEditors: yanxiaodi 929213769@qq.com
+ * @LastEditTime: 2023-02-10 01:51:48
+ * @Description: 
+-->
 # Basic export example
 
 This example shows the most basic usage of `next export`. Without `exportPathMap`.
@@ -24,7 +31,6 @@ Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&ut
 
 - 图标
 - 资源文件夹 迁移
-- sentry 监控
 - 网站统计功能
 
 ## TODO
@@ -35,8 +41,6 @@ Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&ut
   跳转到 github
 
 ## 统计 备注（需要手动修改）
-
-> https://web.umeng.com/main.php?c=site&a=show
 > 底部加入代码
 
 ```html
@@ -53,23 +57,10 @@ Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&ut
     s.parentNode.insertBefore(hm, s)
   })()
 </script>
-<!-- 站长统计 -->
-<script type="text/javascript">
-  document.write(
-    unescape(
-      "%3Cspan id='cnzz_stat_icon_1279350006'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/stat.php%3Fid%3D1279350006' type='text/javascript'%3E%3C/script%3E"
-    )
-  )
-</script>
-<style type="text/css">
-  body > span {
-    display: none;
-  }
-</style>
 ```
 
 #### 上传命令
 
 ```bash
-scp /out/new.zip root@47.105.184.229:/root/production/html
+scp /out/html.zip root@47.105.184.229:/root/www/prod/home_page/html
 ```
