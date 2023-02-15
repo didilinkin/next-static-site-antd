@@ -64,3 +64,12 @@ Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&ut
 ```bash
 scp /out/html.zip root@47.105.184.229:/root/www/prod/home_page/html
 ```
+
+### Nginx 更新命令
+```bash
+service nginx restart
+```
+
+### 参考文章
+
+* [如何使用蚂蚁设计 5.0 切换深色主题 (成功实践)](https://betterprogramming.pub/how-to-toggle-dark-theme-with-ant-design-5-0-eb68552f62b8)
