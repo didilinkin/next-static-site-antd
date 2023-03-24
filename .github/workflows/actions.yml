@@ -1,0 +1,41 @@
+name: Next.js version 12 static site export, GitHub Actions Build and Deploy
+on:
+  push:
+    branches:
+      - main
+# 执行的一项或多项任务
+jobs:
+  build-and-deploy:
+    # 运行在虚拟机环境ubuntu-latest
+    # https://docs.github.com/zh/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on
+    runs-on: ubuntu-latest
+    steps:
+    # 第一步: 获取源码
+    - name: Checkout
+      uses: actions/checkout@v3
+    # 第二步: 设置 Node环境版本
+    - name: Set Node.js
+      uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+    # 第三步: 安装 Pnpm
+    - name: Install Pnpm
+      uses: pnpm/action-setup@v2
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: true
+    # 第四步: 安装依赖
+    - name: Install dependencies
+        run: pnpm install
+    # 第五步: 打包
+    - name: Build production bundle
+      run: |
+        npm run-script build
+    # 第六步: 部署
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: out
