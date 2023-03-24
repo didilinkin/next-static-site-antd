@@ -32,16 +32,14 @@ Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&ut
 - 图标
 - 资源文件夹 迁移
 - 网站统计功能
+- 跳转到 github
 
 ## TODO
 
 - 国际化
-- 404
-- 500
-  跳转到 github
+  
 
 ## 统计 备注（需要手动修改）
-> 底部加入代码
 
 ```html
 <!-- 以下内容之前插入 统计和样式代码 -->
@@ -57,12 +55,6 @@ Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&ut
     s.parentNode.insertBefore(hm, s)
   })()
 </script>
-```
-
-#### 上传命令
-
-```bash
-scp /out/html.zip root@47.105.184.229:/root/www/prod/home_page/html
 ```
 
 ### Nginx 更新命令
