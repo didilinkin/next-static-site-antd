@@ -9,34 +9,28 @@ jobs:
     # https://docs.github.com/zh/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idruns-on
     runs-on: ubuntu-latest
     steps:
-    # 获取源码
-    - name: Checkout
+    - name: 获取源码  🛎️
       uses: actions/checkout@v3
-    # Node环境版本
-    - name: Set Node.js
+    - name: Node环境版本 🗜️
       uses: actions/setup-node@v3
       with:
         node-version: 18
-    # 安装 Pnpm
-    - name: Install Pnpm
+    - name: 安装 Pnpm 🧬
       uses: pnpm/action-setup@v2
       id: pnpm-install
       with:
           version: 7
           run_install: true
-    # 安装依赖
-    - name: Install dependencies
+    - name: 安装依赖 ⚙️
       run: pnpm install
-    # 打包
-    - name: Build production bundle
+    - name: 打包 🏗️
       run: |
         npm run build
         touch out/.nojekyll
-    # 部署
-    - name: Deploy
+    - name: 部署 🚀
       # https://github.com/JamesIves/github-pages-deploy-action
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        BRANCH: gh-pages
-        FOLDER: out
+        branch: gh-pages
+        folder: out
         clean: true

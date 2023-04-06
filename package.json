@@ -1,6 +1,10 @@
 {
   "name": "next-static-site-antd",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/didilinkin/next-static-site-antd.git"
+  },
   "scripts": {
     "dev": "next -p 3002",
     "build": "next build && next export",
